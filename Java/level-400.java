@@ -1,4 +1,6 @@
 public class Main {
+    private static final String FIZZ_TEXT = "Fizz";
+    private static final String BUZZ_TEXT = "Buzz";
     private static final int LOOP_COUNT = 100;
 
     public static void main(String[] args) {
@@ -9,11 +11,11 @@ public class Main {
 
     private static String toFizzBuzzString(int number) {
         if (isFizzBuzz(number)) {
-            return "FizzBuzz";
+            return FIZZ_TEXT + BUZZ_TEXT;
         } else if (isFizz(number)) {
-            return "Fizz";
+            return FIZZ_TEXT;
         } else if (isBuzz(number)) {
-            return "Buzz";
+            return BUZZ_TEXT;
         } else {
             return String.valueOf(number);
         }
@@ -24,10 +26,12 @@ public class Main {
     }
 
     private static boolean isFizz(int number) {
-        return number % 3 == 0;
+        final int FIZZ_NUMBER = 3;
+        return number % FIZZ_NUMBER == 0;
     }
 
     private static boolean isBuzz(int number) {
-        return number % 5 == 0;
+        final int BUZZ_NUMBER = 5;
+        return number % BUZZ_NUMBER == 0;
     }
 }

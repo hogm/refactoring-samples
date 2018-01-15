@@ -1,37 +1,32 @@
 public class Main {
     public static void main(String[] args) {
-        for (int a=1; a<=100; a++) {
-            if (a % 15 == 0) {
-                System.out.println("FizzBuzz")
-            } else if (a % 15 == 1) {
-                System.out.println(a)
-            } else if (a % 15 == 2) {
-                System.out.println(a)
-            } else if (a % 15 == 3) {
-                System.out.println("Fizz")
-            } else if (a % 15 == 4) {
-                System.out.println(a)
-            } else if (a % 15 == 5) {
-                System.out.println("Buzz")
-            } else if (a % 15 == 6) {
-                System.out.println("Fizz")
-            } else if (a % 15 == 7) {
-                System.out.println(a)
-            } else if (a % 15 == 8) {
-                System.out.println(a)
-            } else if (a % 15 == 9) {
-                System.out.println("Fizz")
-            } else if (a % 15 == 10) {
-                System.out.println("Buzz")
-            } else if (a % 15 == 11) {
-                System.out.println(a)
-            } else if (a % 15 == 12) {
-                System.out.println("Fizz")
-            } else if (a % 15 == 13) {
-                System.out.println(a)
-            } else if (a % 15 == 14) {
-                System.out.println(a)
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        int d = 0;
+
+        while(true) {
+            a = a + 1;
+            b = a % 3;
+            c = a % 5;
+            d = a % 15;
+
+            if (a > 100) {
+                break;
             }
+            if (d == 0) {
+                System.out.println("FizzBuzz");
+                continue
+            }
+            if (b == 0) {
+                System.out.println("Fizz");
+                continue
+            }
+            if (c == 0) {
+                System.out.println("Buzz");
+                continue
+            }
+            System.out.println(a);
         }
     }
 }

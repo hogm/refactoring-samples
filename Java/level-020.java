@@ -11,13 +11,17 @@ public class Main {
 
             if (d == 0) {
                 System.out.println("FizzBuzz");
-            } else if (a == 0) {
-                System.out.println("Fizz");
-            } else if (b == 0) {
-                System.out.println("Buzz");
-            } else {
-                System.out.println(a);
+                continue;
             }
+            if (b == 0) {
+                System.out.println("Fizz");
+                continue;
+            }
+            if (c == 0) {
+                System.out.println("Buzz");
+                continue;
+            }
+            System.out.println(a);
         }
     }
 }
