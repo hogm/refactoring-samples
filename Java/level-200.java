@@ -1,29 +1,23 @@
 public class Main {
-    private static final int LOOP_COUNT = 100;
-
     public static void main(String[] args) {
-        for (int i=1; i<=LOOP_COUNT; i++) {
-            if (isFizzBuzz(i)) {
+        int b = 0;
+        int c = 0;
+        int d = 0;
+
+        for (int a=1; a<=100; a++) {
+            b = a % 3;
+            c = a % 5;
+            d = a % 15;
+
+            if (d == 0) {
                 System.out.println("FizzBuzz");
-            } else if (isFizz(i)) {
+            } else if (a == 0) {
                 System.out.println("Fizz");
-            } else if (isBuzz(i)) {
+            } else if (b == 0) {
                 System.out.println("Buzz");
             } else {
-                System.out.println(i);
+                System.out.println(a);
             }
         }
-    }
-
-    private static boolean isFizzBuzz(int number) {
-        return isFizz(number) && isBuzz(number);
-    }
-
-    private static boolean isFizz(int number) {
-        return number % 3 == 0;
-    }
-
-    private static boolean isBuzz(int number) {
-        return number % 5 == 0;
     }
 }

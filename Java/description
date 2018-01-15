@@ -1,9 +1,9 @@
 level-000　リファクタリング前。エラーあり。
-level-020　whileをforに変更。エラー除去。
-level-050　ifの連続をelse ifに変更。
-level-100　計算用の変数を削除。カウンタの変数名をiに。
-level-200　ifを関数化。リテラルを定数化（最小限）
-level-300　FizzBuzz取得ロジックを関数化
-level-400　リテラルを定数化（全て）←これは不要？
+level-100　whileをforに変更。エラー除去。
+level-200　ifの連発をelse ifに変更。
+level-300　計算用の変数を削除。カウンタの変数名をiに。
+level-400　ifを関数化。
+level-500　FizzBuzz取得ロジックを関数化。リテラルを定数化（最小限）
+level-600　リテラルを定数化（全て）←これは不要
 
 level-000-2 ゴミファイル
