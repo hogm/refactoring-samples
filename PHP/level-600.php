@@ -12,10 +12,6 @@
         return empty($value) ? (string) $number : $value;
     }
 
-    function isFizzBuzz($number) {
-        return isFizz($number) && isBuzz($number);
-    }
-
     function isFizz($number) {
         return $number % 3 == 0;
     }

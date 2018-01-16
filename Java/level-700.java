@@ -43,10 +43,6 @@ public class FizzBuzz {
         return value.isEmpty() ? String.valueOf(number) : value;
     }
 
-    private boolean isFizzBuzz(int number) {
-        return isFizz(number) && isBuzz(number);
-    }
-
     private boolean isFizz(int number) {
         return number % 3 == 0;
     }

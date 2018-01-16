@@ -2,9 +2,10 @@
     /*
         Main.php
     */
-    new FizzBuzz(1,100).run();
+    require('FizzBuzz.php');
+    $fizzBuzz = new FizzBuzz(1,100);
+    $fizzBuzz->run();
 ?>
-
 
 <?php
 /*
@@ -31,14 +32,16 @@
         $this->lastNumber = $lastNumber;
     }
 
-    function toFizzBuzzString($number) {
-        $value = isFizz($number) ? 'Fizz' : '';
-        $value .= isBuzz($number) ? 'Buzz' : '';
+    private function toFizzBuzzString($number) {
+        $value = $this->isFizz($number) ? 'Fizz' : '';
+        $value .= $this->isBuzz($number) ? 'Buzz' : '';
         return empty($value) ? (string) $number : $value;
     }
 
-    function isFizzBuzz($number) {
-        return isFizz($number) && isBuzz($number);
+    function run() {
+        for($i = $this->firstNumber; $i <= $this->lastNumber; $i++) {
+            echo $this->toFizzBuzzString($i), "\n";
+        }
     }
 
     function isFizz($number) {

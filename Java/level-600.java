@@ -14,10 +14,6 @@ public class Main {
         return value.isEmpty() ? String.valueOf(number) : value;
     }
 
-    private static boolean isFizzBuzz(int number) {
-        return isFizz(number) && isBuzz(number);
-    }
-
     private static boolean isFizz(int number) {
         return number % 3 == 0;
     }
