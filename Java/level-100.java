@@ -4,7 +4,7 @@ public class Main {
         int c = 0;
         int d = 0;
 
-        for (int a=1; a<=100; a++) {
+        for (int a = 1; a <= 100; a++) {
             b = a % 3;
             c = a % 5;
             d = a % 15;
