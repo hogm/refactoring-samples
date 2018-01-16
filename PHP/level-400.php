@@ -1,25 +1,25 @@
 <?php
     for($i = 1; $i <= 100; $i++) {
-        if (isFizzBuzz($i)) {
+        if (is_fizz_buzz($i)) {
             echo 'FizzBuzz', "\n";
-        } else if (isFizz($i)) {
+        } else if (is_fizz($i)) {
             echo 'Fizz', "\n";
-        } else if (isBuzz($i)) {
+        } else if (is_buzz($i)) {
             echo 'Buzz', "\n";
         } else {
             echo $i, "\n";
         }
     }
 
-    function isFizzBuzz($number) {
-        return isFizz($number) && isBuzz($number);
+    function is_fizz_buzz($number) {
+        return is_fizz($number) && is_buzz($number);
     }
 
-    function isFizz($number) {
+    function is_fizz($number) {
         return $number % 3 == 0;
     }
 
-    function isBuzz($number) {
+    function is_buzz($number) {
         return $number % 5 == 0;
     }
 ?>

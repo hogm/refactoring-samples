@@ -1,7 +1,7 @@
 /*
-    file name :
-        Main.java
-*/
+ *  File name:
+ *      Main.java
+ */
 public class Main {
     public static void main(String[] args) {
         new FizzBuzz(1, 100).run();

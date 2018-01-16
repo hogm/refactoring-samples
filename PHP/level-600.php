@@ -3,20 +3,20 @@
     const LAST_NUMBER = 100;
 
     for($i = FIRST_NUMBER; $i <= LAST_NUMBER; $i++) {
-        echo toFizzBuzzString($i), "\n";
+        echo to_fizz_buzz_string($i), "\n";
     }
 
-    function toFizzBuzzString($number) {
-        $value = isFizz($number) ? 'Fizz' : '';
-        $value .= isBuzz($number) ? 'Buzz' : '';
+    function to_fizz_buzz_string($number) {
+        $value = is_fizz($number) ? 'Fizz' : '';
+        $value .= is_buzz($number) ? 'Buzz' : '';
         return empty($value) ? (string) $number : $value;
     }
 
-    function isFizz($number) {
+    function is_fizz($number) {
         return $number % 3 == 0;
     }
 
-    function isBuzz($number) {
+    function is_buzz($number) {
         return $number % 5 == 0;
     }
 ?>

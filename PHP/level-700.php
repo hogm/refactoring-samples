@@ -1,7 +1,8 @@
 <?php
-    /*
-        Main.php
-    */
+/*
+ *  File name:
+ *      Main.php
+ */
     require('FizzBuzz.php');
     $fizzBuzz = new FizzBuzz(1,100);
     $fizzBuzz->run();
@@ -19,36 +20,36 @@
  *  　　　それ以外は、その数字
  *  　　を標準出力するクラス
  *  Parameters:
- *      firstNumber 最初の数値
- *      lastNumber  最後の数値
+ *      first_number 最初の数値
+ *      last_number  最後の数値
  */
  Class FizzBuzz
  {
-    private $firstNumber;
-    private $lastNumber;
+    private $first_number;
+    private $last_number;
 
-    public function __construct($firstNumber, $lastNumber) {
-        $this->firstNumber = $firstNumber;
-        $this->lastNumber = $lastNumber;
+    public function __construct($first_number, $last_number) {
+        $this->first_number = $first_number;
+        $this->last_number = $last_number;
     }
 
-    private function toFizzBuzzString($number) {
-        $value = $this->isFizz($number) ? 'Fizz' : '';
-        $value .= $this->isBuzz($number) ? 'Buzz' : '';
+    private function to_fizz_buzz_string($number) {
+        $value = $this->is_fizz($number) ? 'Fizz' : '';
+        $value .= $this->is_buzz($number) ? 'Buzz' : '';
         return empty($value) ? (string) $number : $value;
     }
 
     function run() {
-        for($i = $this->firstNumber; $i <= $this->lastNumber; $i++) {
-            echo $this->toFizzBuzzString($i), "\n";
+        for($i = $this->first_number; $i <= $this->last_number; $i++) {
+            echo $this->to_fizz_buzz_string($i), "\n";
         }
     }
 
-    function isFizz($number) {
+    function is_fizz($number) {
         return $number % 3 == 0;
     }
 
-    function isBuzz($number) {
+    function is_buzz($number) {
         return $number % 5 == 0;
     }
 }
