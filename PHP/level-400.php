@@ -1,11 +1,11 @@
 <?php
     for($i = 1; $i <= 100; $i++) {
         if (isFizzBuzz($i)) {
-            echo "FizzBuzz", "\n";
+            echo 'FizzBuzz', "\n";
         } else if (isFizz($i)) {
-            echo "Fizz", "\n";
+            echo 'Fizz', "\n";
         } else if (isBuzz($i)) {
-            echo "Buzz", "\n";
+            echo 'Buzz', "\n";
         } else {
             echo $i, "\n";
         }

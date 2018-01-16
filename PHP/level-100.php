@@ -10,21 +10,20 @@
         $d = $a % 15;
 
         if ($d == 0) {
-            echo "FizzBuzz", "\n";
+            echo 'FizzBuzz', "\n";
             continue;
         }
 
         if ($b == 0) {
-            echo "Fizz", "\n";
+            echo 'Fizz', "\n";
             continue;
         }
 
         if ($c == 0) {
-            echo "Buzz", "\n";
+            echo 'Buzz', "\n";
             continue;
         }
 
         echo $a, "\n";
-
     }
 ?>

@@ -7,15 +7,9 @@
     }
 
     function toFizzBuzzString($number) {
-        if (isFizzBuzz($number)) {
-            return 'FizzBuzz';
-        } else if (isFizz($number)) {
-            return 'Fizz';
-        } else if (isBuzz($number)) {
-            return 'Buzz';
-        } else {
-            return (string) $number;
-        }
+      $value = isFizz($number) ? "Fizz" : "";
+      $value .= isBuzz($number) ? "Buzz" : "";
+      return empty($value) ? (string) $number : $value;
     }
 
     function isFizzBuzz($number) {
