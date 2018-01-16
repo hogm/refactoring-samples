@@ -1,8 +1,9 @@
 public class Main {
-    private static final int LOOP_COUNT = 100;
+    private static final int FIRST_NUMBER = 1;
+    private static final int LAST_NUMBER = 100;
 
     public static void main(String[] args) {
-        for (int i=1; i<=LOOP_COUNT; i++) {
+        for (int i = FIRST_NUMBER; i <= LAST_NUMBER; i++) {
             System.out.println(toFizzBuzzString(i));
         }
     }
