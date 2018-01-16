@@ -33,23 +33,23 @@
         $this->last_number = $last_number;
     }
 
+    public function run() {
+        for($i = $this->first_number; $i <= $this->last_number; $i++) {
+            echo $this->to_fizz_buzz_string($i), "\n";
+        }
+    }
+
     private function to_fizz_buzz_string($number) {
         $value = $this->is_fizz($number) ? 'Fizz' : '';
         $value .= $this->is_buzz($number) ? 'Buzz' : '';
         return empty($value) ? (string) $number : $value;
     }
 
-    function run() {
-        for($i = $this->first_number; $i <= $this->last_number; $i++) {
-            echo $this->to_fizz_buzz_string($i), "\n";
-        }
-    }
-
-    function is_fizz($number) {
+    private function is_fizz($number) {
         return $number % 3 == 0;
     }
 
-    function is_buzz($number) {
+    private function is_buzz($number) {
         return $number % 5 == 0;
     }
 }
