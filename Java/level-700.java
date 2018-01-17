@@ -33,14 +33,24 @@ public class FizzBuzz {
 
     public void run() {
         for (int i = firstNumber; i <= lastNumber; i++) {
-            System.out.println(toFizzBuzzString(i));
+            System.out.println(toFizzBuzzNumber(i));
         }
     }
 
-    private String toFizzBuzzString(int number) {
-        String value = isFizz(number) ? "Fizz" : "";
-        value += isBuzz(number) ? "Buzz" : "";
-        return value.isEmpty() ? String.valueOf(number) : value;
+    private String toFizzBuzzNumber(int number) {
+        return toFizzBuzz(number).isEmpty() ? String.valueOf(number) : toFizzBuzz(number);
+    }
+
+    private String toFizzBuzz(int number) {
+        return toFizz(number) + toBuzz(number);
+    }
+
+    private String toFizz(int number) {
+        return isFizz(number) ? "Fizz" : "";
+    }
+
+    private String toBuzz(int number) {
+        return isBuzz(number) ? "Buzz" : "";
     }
 
     private boolean isFizz(int number) {

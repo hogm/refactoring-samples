@@ -35,14 +35,24 @@
 
     public function run() {
         for($i = $this->first_number; $i <= $this->last_number; $i++) {
-            echo $this->to_fizz_buzz_string($i), "\n";
+            echo $this->to_fizz_buzz_number($i), "\n";
         }
     }
 
-    private function to_fizz_buzz_string($number) {
-        $value = $this->is_fizz($number) ? 'Fizz' : '';
-        $value .= $this->is_buzz($number) ? 'Buzz' : '';
-        return empty($value) ? (string) $number : $value;
+    private function to_fizz_buzz_number($number) {
+        return empty($this->to_fizz_buzz($number)) ? (string) $number : $this->to_fizz_buzz($number);
+    }
+
+    private function to_fizz_buzz($number) {
+        return $this->to_fizz($number) . $this->to_buzz($number);
+    }
+
+    private function to_fizz($number) {
+        return $this->is_fizz($number) ? 'Fizz' : '';
+    }
+
+    private function to_buzz($number) {
+        return $this->is_buzz($number) ? 'Buzz' : '';
     }
 
     private function is_fizz($number) {
